@@ -1,13 +1,13 @@
 import profileLogo from '../assets/profileLogo.jpeg';
 const Hero = () => {
     return (
-        <div className="flex flex-col lg:px-4">
+        <div className="flex flex-col lg:px-6">
             <div className="flex justify-between items-center ">
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col">
                     <h1 className="m-0 font-bold text-4xl md:text-5xl lg:text-6xl " >Hi, I'm Regi!</h1>
-                    <p className="text-base lg:text-lg max-w-[250px] lg:max-w-[450px] font-light">Software Engineering student. I love learning and building projects. Active on Github.</p>
+                    <p className="text-base lg:text-xl max-w-[250px] lg:max-w-[450px] font-light mt-1">Software Engineering student. I love learning and building projects. Active on Github.</p>
                 </div>
-                <img src={profileLogo} alt="profileLogo" className="w-24 h-24 lg:w-32 lg:h-32 rounded-full" />
+                <img src={profileLogo} alt="profileLogo" className="w-24 h-24 lg:w-28 lg:h-28 rounded-full" />
             </div>
             <div className="flex justify-between items-center mt-8">
                 <div className="flex flex-col">
@@ -20,6 +20,6 @@ const Hero = () => {
         </div>
     );
 }
-//
+
 
 export default Hero;
