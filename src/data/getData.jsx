@@ -7,6 +7,7 @@ import Movie4UDemo from '../assets/Movie4UDemo.mov';
 import schoolMateDemo from  '../assets/schoolMateDemo.mov';
 import battleShipDemo from '../assets/battleShipDemo.mov';
 import ticTacToeDemo from '../assets/ticTacToeDemo.mov';
+import tailwindLogo from '../assets/tailwindLogo.svg';
 const data = {
     name: "Regi",
     bio: "Software Engineering student. I love learning and building projects. Active on Github.",
@@ -42,6 +43,7 @@ const data = {
         { name: "PHP", icon: "fab fa-php", color: "#8993BE" },
         { name: "MongoDB", icon: "fas fa-database", color: "#4DB33D" },
         { name: "MySQL", icon: "fas fa-database", color: "#00758F" },
+        { name: "Tailwind CSS", icon: "fas fa-water", color: "#38B2AC" }            
       ],
     projects: [
         {
