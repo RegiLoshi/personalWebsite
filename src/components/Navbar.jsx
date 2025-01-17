@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Navbar = ({ socials }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
-
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
         const root = window.document.documentElement;
