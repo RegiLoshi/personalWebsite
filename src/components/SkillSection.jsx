@@ -6,12 +6,12 @@ const SkillsSection = ({ skills }) => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-4 bg-white shadow-md rounded-lg border border-gray-200 hover:shadow-lg transition-transform hover:scale-105"
+              className="dark:bg-[#08090A] flex flex-col items-center justify-center p-4 bg-white shadow-md rounded-lg border border-gray-200 hover:shadow-lg transition-transform hover:scale-105"
             >
               <div className="text-4xl mb-2">
                 <i className={`${skill.icon}`} style={{ color: skill.color || '#6c63ff' }}></i>
               </div>
-              <span className="text-sm font-semibold text-gray-700">{skill.name}</span>
+              <span className="dark:text-gray-300 text-sm font-semibold text-gray-700">{skill.name}</span>
             </div>
           ))}
         </div>

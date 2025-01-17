@@ -7,14 +7,16 @@ const Navbar = ({ socials }) => {
         setIsDarkMode(!isDarkMode);
         const root = window.document.documentElement;
         if (isDarkMode) {
+            root.classList.remove("bg-[#08090A]");
             root.classList.remove("dark");
         } else {
+            root.classList.add("bg-[#08090A]");
             root.classList.add("dark");
         }
     };
 
     return (
-        <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800 shadow-md p-3 sm:p-4 flex justify-between items-center space-x-3 sm:space-x-4 rounded-full w-max max-w-[90%] sm:max-w-none">
+        <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-[#08090A] shadow-md p-3 sm:p-4 flex justify-between items-center space-x-3 sm:space-x-4 rounded-full w-max max-w-[90%] sm:max-w-none">
             {socials.map((social, index) => (
                 <div key={social.name} className="flex items-center justify-center">
                     <a
@@ -31,7 +33,6 @@ const Navbar = ({ socials }) => {
                     )}
                 </div>
             ))}
-            {/* Light/Dark Mode Toggle */}
             <button
                 onClick={toggleTheme}
                 className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white text-lg sm:text-xl flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10"

@@ -32,7 +32,7 @@ const ProjectSection = ({ projects }) => {
                 {videoToShow < projects.length && (
                     <button
                         onClick={() => setVideoToShow(videoToShow + 2)}
-                        className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
+                        className="dark:bg-white dark:text-[#08090A] bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
                     >
                         Show More
                     </button>
@@ -40,7 +40,7 @@ const ProjectSection = ({ projects }) => {
                 {videoToShow > 2 && (
                     <button
                         onClick={handleShowLess}
-                        className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
+                        className="dark:bg-white dark:text-[#08090A] bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
                     >
                         Show Less
                     </button>
