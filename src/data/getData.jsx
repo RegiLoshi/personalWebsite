@@ -2,6 +2,11 @@ import { createContext } from 'react';
 import profileLogo from '../assets/profileLogo.jpeg';
 import TiranaITLogo from '../assets/TiranaITLogo.jpeg';
 import EpokaLogo from '../assets/EpokaUniversityLogo.png';
+import cCompilerLogo from '../assets/cCompilerLogo.png';
+import Movie4UDemo from '../assets/Movie4UDemo.mov';
+import schoolMateDemo from  '../assets/schoolMateDemo.mov';
+import battleShipDemo from '../assets/battleShipDemo.mov';
+import ticTacToeDemo from '../assets/ticTacToeDemo.mov';
 const data = {
     name: "Regi",
     bio: "Software Engineering student. I love learning and building projects. Active on Github.",
@@ -38,6 +43,61 @@ const data = {
         { name: "MongoDB", icon: "fas fa-database", color: "#4DB33D" },
         { name: "MySQL", icon: "fas fa-database", color: "#00758F" },
       ],
+    projects: [
+        {
+            title: "C Compiler",
+            status: "In Progress",
+            description: "A C compiler still in progress. Built with Rust, can handle local variables and also arithmetic expressions",
+            skills: ["Rust", "Assembly"],
+            buttons: [{
+                github:"https://github.com/RegiLoshi/C_Compiler_In_Rust"
+                }],
+            image: cCompilerLogo
+        },
+        {
+            title: "Movies4U",
+            status: "Finished",
+            description: "Movies4U is a web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a platform for users to browse, like, and manage their favorite movies or shows.",
+            skills: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS", "Redux", "JWT"],
+            buttons: [{
+                github:"https://github.com/RegiLoshi/Movies4U-Netflix-Copy",
+                website: "movies4-u-frontend.vercel.app/"
+                }],
+            video: Movie4UDemo
+        },
+        {
+            title: "SchoolMate",
+            status: "Finished",
+            description: "SchoolMate is a web application that provides a platform for students and teachers with live chat to manage their courses, assignments, and grades.",
+            skills: ["Java", "MySQL"],
+            buttons: [{
+                github:"https://github.com/RegiLoshi/SchoolMate",
+            }],
+            video: schoolMateDemo
+        },
+        {
+            title: "BattleShip",
+            status: "Finished",
+            description: "BattleShip is a web game created using vanilla html, css and javascript. You play againt an intelligent computer that uses a simple algorithm to guess your ships.",
+            skills: ["HTML", "CSS", "JavaScript, Jest"],
+            buttons: [{
+                github:"https://github.com/RegiLoshi/BattleShipGame/tree/main",
+                website: "https://regiloshi.github.io/BattleShipGame/"
+            }],
+            video: battleShipDemo,
+        },
+        {
+            title: "TicTacToe",
+            status: "Finished",
+            description: "TicTacToe is a web game created using vanilla html, css and javascript. You can play against a friend or against the computer.",
+            skills: ["HTML", "CSS", "JavaScript, Jest"],
+            buttons: [{
+                github:"https://github.com/RegiLoshi/TicTacToe",
+                website: "regiloshi.github.io/TicTacToe/"    
+            }],
+            video: ticTacToeDemo
+        },
+    ]
 };
 
 export const DataContext = createContext(data); 
