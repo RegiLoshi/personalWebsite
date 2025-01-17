@@ -1,6 +1,6 @@
 const SkillsSection = ({ skills }) => {
     return (
-      <div className="flex flex-col lg:px-6">
+      <div className="flex flex-col">
         <h2 className="text-lg lg:text-xl font-bold">Skills</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
           {skills.map((skill, index) => (

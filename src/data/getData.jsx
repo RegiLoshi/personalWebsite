@@ -49,20 +49,20 @@ const data = {
             status: "In Progress",
             description: "A C compiler still in progress. Built with Rust, can handle local variables and also arithmetic expressions",
             skills: ["Rust", "Assembly"],
-            buttons: [{
+            buttons: {
                 github:"https://github.com/RegiLoshi/C_Compiler_In_Rust"
-                }],
+                },
             image: cCompilerLogo
         },
         {
             title: "Movies4U",
             status: "Finished",
-            description: "Movies4U is a web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a platform for users to browse, like, and manage their favorite movies or shows.",
+            description: "Movies4U is a web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a platform for users to watch, browse, like, and manage their favorite movies or shows.",
             skills: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS", "Redux", "JWT"],
-            buttons: [{
+            buttons: {
                 github:"https://github.com/RegiLoshi/Movies4U-Netflix-Copy",
-                website: "movies4-u-frontend.vercel.app/"
-                }],
+                website: "https://movies4-u-frontend.vercel.app/"
+                },
             video: Movie4UDemo
         },
         {
@@ -70,34 +70,41 @@ const data = {
             status: "Finished",
             description: "SchoolMate is a web application that provides a platform for students and teachers with live chat to manage their courses, assignments, and grades.",
             skills: ["Java", "MySQL"],
-            buttons: [{
+            buttons: {
                 github:"https://github.com/RegiLoshi/SchoolMate",
-            }],
+            },
             video: schoolMateDemo
         },
         {
             title: "BattleShip",
             status: "Finished",
             description: "BattleShip is a web game created using vanilla html, css and javascript. You play againt an intelligent computer that uses a simple algorithm to guess your ships.",
-            skills: ["HTML", "CSS", "JavaScript, Jest"],
-            buttons: [{
+            skills: ["HTML", "CSS", "JavaScript", "Jest"],
+            buttons: {
                 github:"https://github.com/RegiLoshi/BattleShipGame/tree/main",
                 website: "https://regiloshi.github.io/BattleShipGame/"
-            }],
+            },
             video: battleShipDemo,
         },
         {
             title: "TicTacToe",
             status: "Finished",
             description: "TicTacToe is a web game created using vanilla html, css and javascript. You can play against a friend or against the computer.",
-            skills: ["HTML", "CSS", "JavaScript, Jest"],
-            buttons: [{
+            skills: ["HTML", "CSS", "JavaScript", "Jest"],
+            buttons: {
                 github:"https://github.com/RegiLoshi/TicTacToe",
-                website: "regiloshi.github.io/TicTacToe/"    
-            }],
+                website: "https://regiloshi.github.io/TicTacToe/"    
+            },
             video: ticTacToeDemo
         },
-    ]
+    ],
+    socials: [
+        { name: "Home", icon: <i className="fas fa-home"></i>, link: "/" },
+        { name: "GitHub", icon: <i className="fab fa-github"></i>, link: "https://github.com/RegiLoshi" },
+        { name: "LinkedIn", icon: <i className="fab fa-linkedin"></i>, link: "https://www.linkedin.com/in/regi-loshi-190602276/" },
+        { name: "Instagram", icon: <i className="fab fa-instagram"></i>, link: "https://instagram.com/regi.loshi?igshid=OGQ5ZDc2ODk2ZA==" },
+        { name: "Email", icon: <i className="far fa-envelope"></i>, link: "mailto:rloshi111@gmail.com" },
+    ],    
 };
 
 export const DataContext = createContext(data); 
