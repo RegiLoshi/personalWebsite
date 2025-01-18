@@ -3,11 +3,10 @@ import profileLogo from '../assets/profileLogo.jpeg';
 import TiranaITLogo from '../assets/TiranaITLogo.jpeg';
 import EpokaLogo from '../assets/EpokaUniversityLogo.png';
 import cCompilerLogo from '../assets/cCompilerLogo.png';
-import Movie4UDemo from '../assets/Movie4UDemo.mov';
-import schoolMateDemo from  '../assets/schoolMateDemo.mov';
-import battleShipDemo from '../assets/battleShipDemo.mov';
-import ticTacToeDemo from '../assets/ticTacToeDemo.mov';
-import tailwindLogo from '../assets/tailwindLogo.svg';
+import Movie4UDemo from '../assets/Movie4UDemo.mp4';
+import schoolMateDemo from  '../assets/schoolMateDemo.mp4';
+import battleShipDemo from '../assets/battleShipDemo.mp4';
+import ticTacToeDemo from '../assets/ticTacToeDemo.mp4';
 const data = {
     name: "Regi",
     bio: "Software Engineering student. I love learning and building projects. Active on Github.",
