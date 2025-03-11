@@ -8,7 +8,29 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" id="theme-color" />
+    <meta name="color-scheme" content="light dark" />
     <title>Regi Loshi</title>
+    <script>
+      // Immediately set theme based on user preference to avoid flash
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+        
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.add('bg-[#08090A]');
+          document.body.style.backgroundColor = "#08090A";
+          document.getElementById('theme-color').setAttribute('content', '#08090A');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.remove('bg-[#08090A]');
+          document.body.style.backgroundColor = "#ffffff";
+          document.getElementById('theme-color').setAttribute('content', '#ffffff');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

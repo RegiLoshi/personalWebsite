@@ -1,20 +1,41 @@
+import PropTypes from 'prop-types';
 
 const Education = ({ education }) => {
     return (
-        <div className="flex justify-between">
-            <div className="flex gap-2">
-                <img src={education.logo} alt="logo" className="w-10 h-10 lg:w-16 lg:h-16 rounded-full" />
-                <div className="flex flex-col">
-                    <div className="flex justify-between items-center">
-                        <h3 className="font-semibold text-sm lg:text-base dark:text-white">{education.school}</h3>
-                        <p className="text-xs lg:text-sm font-light dark:text-gray-400">{education.date}</p>
+        <div className="flex flex-col rounded-lg p-4 border border-gray-200 dark:border-gray-800 hover:shadow-md transition-all duration-300">
+            <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                    <img 
+                        src={education.logo} 
+                        alt={`${education.school} logo`} 
+                        className="w-16 h-16 rounded-lg object-cover" 
+                    />
+                </div>
+                <div className="flex flex-col w-full">
+                    <div className="flex flex-col mb-1">
+                        <h3 className="text-lg font-bold dark:text-white">{education.school}</h3>
+                        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{education.title}</p>
                     </div>
-                    <p className="text-xs lg:text-sm font-light dark:text-gray-400">{education.title}</p>
-                    <p className="text-xs lg:text-sm  font-light dark:text-gray-400">{education.description}</p>
+                    <div className="mb-2">
+                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                            {education.date}
+                        </span>
+                    </div>
+                    <p className="text-sm leading-relaxed dark:text-gray-400">{education.description}</p>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+Education.propTypes = {
+    education: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        school: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        logo: PropTypes.string.isRequired
+    }).isRequired
+};
 
 export default Education;

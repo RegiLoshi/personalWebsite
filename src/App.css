@@ -1,4 +1,3 @@
-
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -21,12 +20,63 @@
     }
     to {
       opacity: 0;
-      transform: translateY(5px);
+      transform: translateY(-5px);
     }
   }
   
   .animate-fadeOut {
     animation: fadeOut 0.3s ease-in-out forwards;
+  }
+  
+  /* Theme transition styles */
+  :root {
+    --transition-duration: 300ms;
+    --light-bg: #ffffff;
+    --dark-bg: #08090A;
+  }
+
+  html {
+    background-color: var(--light-bg);
+  }
+
+  html.dark {
+    background-color: var(--dark-bg);
+  }
+
+  body {
+    transition: background-color var(--transition-duration) ease;
+    background-color: var(--light-bg);
+  }
+
+  body.dark {
+    background-color: var(--dark-bg);
+  }
+
+  /* Only transition background and border properties, not text */
+  * {
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Apply text color transitions only to specific elements that need it */
+  button, a, .nav-item {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-duration: var(--transition-duration);
+  }
+
+  /* Input elements and other UI components */
+  input, textarea, select, img, video {
+    transition: background-color var(--transition-duration) ease,
+                border-color var(--transition-duration) ease,
+                box-shadow var(--transition-duration) ease;
+  }
+
+  /* Smooth transitions for all elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, section, article {
+    transition: background-color var(--transition-duration) ease,
+                border-color var(--transition-duration) ease,
+                box-shadow var(--transition-duration) ease;
   }
   
   

@@ -7,6 +7,7 @@ import Movie4UDemo from '../assets/Movie4UDemo.mp4';
 import schoolMateDemo from  '../assets/schoolMateDemo.mp4';
 import battleShipDemo from '../assets/battleShipDemo.mp4';
 import ticTacToeDemo from '../assets/ticTacToeDemo.mp4';
+import division5Logo from '../assets/division5_logo.jpeg';
 const data = {
     name: "Regi",
     bio: "Software Engineering student. I love learning and building projects. Active on Github.",
@@ -19,6 +20,13 @@ const data = {
             date: "October 2024 - December 2024",
             description: "Learned about Git, Jira, SQL, and Java Spring Boot. Worked on a project that involved using the knowledge gained to build a RESTful API.",
             logo: TiranaITLogo
+        },
+        {
+            title: "Full Stack Developer Intern",
+            company: "Division5",
+            date: "March 2024 - Ongoing",
+            description: "Using technologies like React, Node, Express, PostgreSQL to build projects.",
+            logo: division5Logo
         },
     ],
     education: [

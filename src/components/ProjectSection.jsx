@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ProjectSection = ({ projects }) => {
     const [videoToShow, setVideoToShow] = useState(2);
@@ -15,8 +16,8 @@ const ProjectSection = ({ projects }) => {
     };
 
     return (
-        <div className='flex flex-col gap-4 items-center justify-center'>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 transition-all duration-300">
+        <div className='flex flex-col gap-8 items-center justify-center'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full transition-all duration-300">
                 {projects.slice(0, videoToShow).map((project) => (
                     <div
                         key={project.title}
@@ -28,26 +29,42 @@ const ProjectSection = ({ projects }) => {
                     </div>
                 ))}
             </div>
-            <div className='flex gap-2'>
+            <div className='flex gap-4 mt-2'>
                 {videoToShow < projects.length && (
                     <button
                         onClick={() => setVideoToShow(videoToShow + 2)}
-                        className="dark:bg-white dark:text-[#08090A] bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
+                        className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors duration-200 dark:bg-white dark:text-[#08090A] dark:hover:bg-gray-200 flex items-center gap-2"
                     >
-                        Show More
+                        <span>Show More</span>
+                        <span>↓</span>
                     </button>
                 )}
                 {videoToShow > 2 && (
                     <button
                         onClick={handleShowLess}
-                        className="dark:bg-white dark:text-[#08090A] bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 transition-colors duration-200"
+                        className="bg-gray-800 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors duration-200 dark:bg-white dark:text-[#08090A] dark:hover:bg-gray-200 flex items-center gap-2"
                     >
-                        Show Less
+                        <span>Show Less</span>
+                        <span>↑</span>
                     </button>
                 )}
             </div>
         </div>
     );
+};
+
+ProjectSection.propTypes = {
+    projects: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            status: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+            buttons: PropTypes.object.isRequired,
+            image: PropTypes.string,
+            video: PropTypes.string
+        })
+    ).isRequired
 };
 
 export default ProjectSection;
